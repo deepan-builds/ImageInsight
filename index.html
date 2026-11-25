@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ImageInsight | AI Image Analyzer</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a class="logo" href="#">✦ Image<span>Insight</span></a><a href="#steps">How it works</a></header>
+<main>
+<section class="hero"><div><p class="eyebrow">AI-POWERED IMAGE UNDERSTANDING</p><h1>Turn images into <span>understanding.</span></h1><p class="intro">Upload an image to extract visible text and discover what it contains.</p><div class="ticks">✓ Text extraction　 ✓ Image description　 ✓ Multiple formats</div></div><div class="hero-art"><div class="art-sun"></div><div class="art-mountain"></div><b>IMAGE → INSIGHT</b></div></section>
+<section class="workspace">
+<article class="panel">
+<div class="heading"><div><small>01 / INPUT</small><h2>Upload your image</h2></div></div>
+<p class="muted">Choose a file or drag and drop it below.</p>
+<label class="dropzone" id="dropzone"><input id="fileInput" type="file" accept="image/jpeg,image/png,image/webp,image/gif,image/bmp"><span class="upload">↑</span><b>Drop your image here</b><span>or <u>browse files</u></span><small>JPG · JPEG · PNG · WEBP · GIF · BMP</small></label>
+<p class="hint">Maximum file size: 3 MB (to fit the serverless request limit).</p>
+<div id="previewWrap" hidden><img id="preview" alt="Selected image preview"><div class="fileline"><span id="fileName"></span><button id="removeBtn" class="link" type="button">Remove ×</button></div></div>
+<button id="analyzeBtn" class="primary" disabled>✧ Analyze image　→</button><p id="error" class="error" role="alert"></p>
+</article>
+<article class="panel results">
+<div class="heading"><div><small>02 / OUTPUT</small><h2>Your insights</h2></div><span class="pill">AI OUTPUT</span></div>
+<div id="empty" class="empty"><div class="spark">✧</div><b>Your results will appear here</b><p>Upload an image and select Analyze image to get started.</p></div>
+<div id="loading" class="empty" hidden><div class="spinner"></div><b>Analyzing your image…</b><p>AI is reading visible text and understanding the image.</p></div>
+<div id="results" hidden>
+<div class="result"><div class="result-head"><b>Extracted text</b><button data-copy="textResult">Copy</button></div><p id="textResult"></p></div>
+<div class="result"><div class="result-head"><b>Image description</b><button data-copy="descriptionResult">Copy</button></div><p id="descriptionResult"></p></div>
+<button id="downloadBtn" class="secondary">↓ Download results</button>
+</div>
+</article>
+</section>
+<section id="steps" class="steps"><p class="eyebrow">SIMPLE BY DESIGN</p><h2>From image to insight in three steps</h2><div class="stepgrid"><div><b>01</b><h3>Upload</h3><p>Select an image or drag it into the upload area.</p></div><div><b>02</b><h3>Analyze</h3><p>AI extracts visible text and understands the scene.</p></div><div><b>03</b><h3>Use your results</h3><p>Copy or download the generated content.</p></div></div></section>
+</main><footer>✦ ImageInsight <span>HTML · CSS · JavaScript · Gemini AI</span></footer>
+<script src="script.js"></script>
+</body></html>
